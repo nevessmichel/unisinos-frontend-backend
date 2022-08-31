@@ -1,0 +1,17 @@
+
+spring.liquibase.change-log: classpath:/db/changelog/changelog-master.xml
+spring.liquibase.enabled: true
+
+# PostgreSQL
+spring.jpa:
+    database: POSTGRESQL
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: ${JPA_SHOW_SQL:false}
+spring.datasource:
+    platform: POSTGRESQL
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DATABASE_NAME:postgres}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:postgres}
+
+
