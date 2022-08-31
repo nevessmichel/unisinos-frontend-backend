@@ -1,0 +1,23 @@
+databaseChangeLog:
+    -  preConditions:
+    -  runningAs:
+           username:  liquibase
+    -  changeSet:
+           id:  1
+           author:  Michel
+           changes:
+               -  createTable:
+                      tableName:  users
+                      columns:
+                          -  column:
+                                 name:  email
+                                 type:  varchar(255)
+                                 constraints:
+                                     primaryKey:  true
+                                     nullable:  false
+                          -  column:
+                                 name:  name
+                                 type:  varchar(255)
+                          - column:
+                                name: password
+                                type: varchar(255)
