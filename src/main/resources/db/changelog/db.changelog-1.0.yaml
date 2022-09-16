@@ -10,10 +10,15 @@ databaseChangeLog:
                       tableName:  users
                       columns:
                           -  column:
+                               name: id
+                               type: UUID
+                               constraints:
+                                 primaryKey:  true
+                          -  column:
                                  name:  email
                                  type:  varchar(255)
                                  constraints:
-                                     primaryKey:  true
+                                     unique:  true
                                      nullable:  false
                           -  column:
                                  name:  name
